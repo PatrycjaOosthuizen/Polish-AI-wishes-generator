@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>AI Generator Życzeń</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/038/original/envelope2.png?1707725278"
+    />
+    <div class="container">
+      <header>
+        <h1>Generator Życzeń na każdą okazję</h1>
+        <p>
+          Generator życzeń oparty na sztucznej inteligencji pomoże Ci stworzyć
+          wiadomości, które wywołają uśmiech na twarzach bliskich i sprawią, że
+          poczują się wyjątkowo.
+        </p>
+      </header>
+      <main>
+        <form id="wishes-generator-form">
+          <select id="occasion" required>
+            <option value="">Wybierz okazję...</option>
+            <option value="Rocznica">📆 Rocznica</option>
+            <option value="Urodziny">🥳 Urodziny</option>
+            <option value="Święta Bożego Narodzenia">
+              🎄 Święta Bożego Narodzenia
+            </option>
+            <option value="Gratulacje">🎉 Gratulacje</option>
+            <option value="Dzień Babci">🧓 Dzień Babci</option>
+            <option value="Dzień Dziadka">👴 Dzień Dziadka</option>
+            <option value="Święta Wielkanocne">🐣 Święta Wielkanocne</option>
+            <option value="Dzień Matki">👩 Dzień Matki</option>
+            <option value="Dzień Ojca">👨 Dzień Ojca</option>
+            <option value="Szybkiego powrotu do zdrowia">
+              ❤️‍🩹 Szybkiego powrotu do zdrowia
+            </option>
+            <option value="Ukończenie szkoły">🎓 Ukończenie szkoły</option>
+            <option value="Nowy Rok">🎇 Nowy Rok</option>
+            <option value="Emerytura">🏖️ Emerytura</option>
+            <option value="Podziękowanie">🙏 Podziękowanie</option>
+            <option value="Walentynki">🌹 Walentynki</option>
+            <option value="Ślub">💍 Ślub</option>
+          </select>
+
+          <select id="tone">
+            <option value="">Wybierz ton życzeń...</option>
+            <option value="Przygodowy">Przygodowy</option>
+            <option value="Elegancki">Elegancki</option>
+            <option value="Formalny">Formalny</option>
+            <option value="Energetyczny">Energetyczny</option>
+            <option value="Podekscytowany">Podekscytowany</option>
+            <option value="Wdzięczny">Wdzięczny</option>
+            <option value="Serdeczny">Serdeczny</option>
+            <option value="Pełny nadziei">Pełny nadziei</option>
+            <option value="Inspirujący">Inspirujący</option>
+            <option value="Radosny">Radosny</option>
+            <option value="Nostalgiczny">Nostalgiczny</option>
+            <option value="Sentymentalny">Sentymentalny</option>
+            <option value="Wspierający">Wspierający</option>
+          </select>
+          <select id="for">
+            <option value="">Wybierz dla kogo?...</option>
+            <option value="Przyjaciela">🧑 Przyjaciela</option>
+            <option value="Matki">👩 Matki</option>
+            <option value="Ojca">👨 Ojca</option>
+            <option value="Syna">🧒 Syna</option>
+            <option value="Córki">👧 Córki</option>
+            <option value="Dziadka">👴 Dziadka</option>
+            <option value="Babci">🧓 Babci</option>
+            <option value="Brata">🧑‍🦱 Brata</option>
+            <option value="Siostry">👩‍🦱 Siostry</option>
+            <option value="Męża">👱‍♂️ Męża</option>
+            <option value="Żony">👱‍♀️ Żony</option>
+            <option value="Partnera">🧑 Partnera</option>
+            <option value="Wnuczka">🧒 Wnuczka</option>
+            <option value="Wnuczki">👧 Wnuczki</option>
+            <option value="Nowożeńców ">💍 Nowożeńców</option>
+            <option value="Chłopaka">🧍‍♂️ Chłopaka</option>
+            <option value="Dziewczyny">🧍‍♀️ Dziewczyny</option>
+            <option value="Członka rodziny">👨‍👩‍👧‍👦 Członka rodziny</option>
+            <option value="Nauczyciela">🧑‍🏫 Nauczyciela</option>
+            <option value="Pracownika">🧑‍💼 Pracownika</option>
+            <option value="Szefa">👩‍💼 Szefa</option>
+          </select>
+          <input
+            type="text"
+            placeholder="Wpisz Imię …"
+            autofocus
+            autocomplete="off"
+            class="name-input"
+            id="name"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+
+        <div class="wishes hidden" id="wishes"></div>
+      </main>
+      <footer>
+        Ten AI projekt kodowała
+        <a href="https://github.com/PatrycjaOosthuizen" target="_blank"
+          >Patrycja Oosthuizen</a
+        >
+        jest
+        <a
+          href="https://github.com/PatrycjaOosthuizen/AI-wishes-generator"
+          target="_blank"
+          >otwartym źródłem na GitHub</a
+        >
+        i jest na
+        <a href="https://ai-wishes-generator-po-code.netlify.app">Netlify</a>
+      </footer>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
