@@ -1,5 +1,5 @@
 # AI Wishes Generator
-Oiginal project from SheCodes using:
+Original project from SheCodes using:
 
 * HTML, CSS, Java Script
 * The SheCodes AI API
