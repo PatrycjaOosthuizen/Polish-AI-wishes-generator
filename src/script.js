@@ -28,7 +28,7 @@ function generateWishes(event) {
 
   let wishesElement = document.querySelector("#wishes");
   wishesElement.classList.remove("hidden");
-  wishesElement.innerHTML = `<div id="loading"></div>  Generuje życzenia na okazję ${occasionSelect.value}  `;
+  wishesElement.innerHTML = `<div id="loading"></div>  Generuje życzenia na okazję --> ${occasionSelect.value}  `;
 
   axios.get(apiUrl).then(displayWishes);
 }
